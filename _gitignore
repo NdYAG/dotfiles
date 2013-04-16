@@ -1,0 +1,17 @@
+# From git://github.com/github/gitignore.git
+# ignore Emacs temp files
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+
+# Org-mode
+.org-id-locations
+*_archive
+
+# Jekyll
+_site/
