@@ -21,3 +21,6 @@
     ci = commit
     co = checkout
     br = branch
+[user]
+    name = siemonday
+    email = siemonday@gmail.com
