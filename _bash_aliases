@@ -24,6 +24,9 @@ alias egrep='egrep --color=auto'
 alias rm="rm -i"
 alias ..="cd .."
 alias ...="cd ../.."
+alias ..3="cd ../../.."
+alias ..4="cd ../../../.."
+alias ..5="cd ../../../../.."
 alias ,d="cd ~/Document"
 alias ,dev="cd ~/Develop"
 
