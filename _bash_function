@@ -1,0 +1,8 @@
+function pretty_cat {
+    # ensure one argument and [todo]file can be pygmentized [todo] utf-8
+    if [ -z "$2" ]; then
+	pygmentize -O encoding=utf-8 $1 | less -R
+    else
+	cat $*
+    fi
+}

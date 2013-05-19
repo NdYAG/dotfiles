@@ -1,0 +1,8 @@
+# tmux is login interactive shell
+# will load bash_profile (if exist) and ignore bashrc
+# Ubuntu/Debian will load bashrc and ignore bash_profile (not login shell)
+# See http://blog.trevorbramble.com/past/2012/3/12/tmux_bashrc_bash_profile_and_you/
+
+if [ -f ~/.bashrc ]; then
+    . ~/.bashrc
+fi

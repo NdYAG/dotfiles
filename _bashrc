@@ -68,23 +68,11 @@ esac
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias ls='ls --color=auto'
-    alias cl='clear'
-    alias sk='LD_LIBRARY_PATH=/home/simon/Downloads/skype-4.1.0.20/:$LD_LIBRARY_PATH /home/simon/Downloads/skype-4.1.0.20/skype
-'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
-#alias l='ls -CF'
-
+# if [ -f ~/.bash_profile ]; then
+#    . ~/.bash_profile
+# fi
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -92,6 +80,10 @@ fi
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_function ]; then
+    . ~/.bash_function
 fi
 
 # enable programmable completion features (you don't need to enable
