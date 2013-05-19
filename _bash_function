@@ -1,6 +1,7 @@
 function pretty_cat {
-    # ensure one argument and [todo]file can be pygmentized [todo] utf-8
-    if [ -z "$2" ]; then
+    # ensure there is just one argument and file can be pygmentized
+    fileExt=$( pygmentize -N $1 )
+    if [ -z "$2" ] && [ "$fileExt" != "text" ]; then
 	pygmentize -O encoding=utf-8 $1 | less -R
     else
 	cat $*
