@@ -93,13 +93,24 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# start tmux when login
+# TMUX
+if which tmux 2>&1 >/dev/null; then
+    # if no session is started, start a new session
+    test -z ${TMUX} && tmux
+
+    # when quitting tmux, try to attach
+    while test -z ${TMUX}; do
+        tmux attach || break
+    done
+fi
 
 #-------------------------------------------------------------
 # environment settings
 #-------------------------------------------------------------
-export GTK_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
-export QT_IM_MODULE=ibus
+export GTK_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+export QT_IM_MODULE=fcitx
 export PATH=$PATH:/home/simon/bin:/sbin:/usr/sbin:/usr/share/sbin
 # export TEXMACS_PATH=/home/simon/Downloads/TeXmacs/TeXmacs-1.0.7.19-x11-i386-pc-linux-gnu
 # export PATH=$TEXMACS_PATH/bin:$PATH
