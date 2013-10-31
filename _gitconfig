@@ -20,10 +20,19 @@
     st = status
     ci = commit
     co = checkout
-    br = branch -a
+    br = branch -a	
+    gr = grep
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    g = grep --break --heading --line-number
 [user]
     name = siemonday
     email = siemonday@gmail.com
 [help]
     autocorrect = 1
+[filter "tabspace"]
+    clean = expand --tabs=2 --initial
+[filter "trimWhitespace"]
+    clean = trim_whitespace
+[grep]
+    extendRegexp = true
+    lineNumber = true

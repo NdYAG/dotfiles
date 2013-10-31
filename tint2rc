@@ -79,10 +79,13 @@ font_shadow = 0
 
 # System Tray
 systray = 1
-systray_padding = 4 4 5
-systray_sort = ascending
+# systray_padding = 4 4 5
+systray_padding = 10 4 5
+# systray_sort = ascending
+systray_sort = left2right
 systray_background_id = 0
 systray_icon_size = 20
+# systray_icon_asb = 100 0 -10
 systray_icon_asb = 100 0 -10
 
 # Clock

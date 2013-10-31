@@ -1,0 +1,4 @@
+style "gtk-default-zh-cn" {
+    font_name = "Inconsolata,微软雅黑 10"
+}
+class "*" style "gtk-default-zh-cn"
