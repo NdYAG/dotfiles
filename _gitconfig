@@ -17,6 +17,8 @@
     changed = green
     untracked = cyan
 [alias]
+    a = add
+    c = commit -m
     st = status
     ci = commit
     co = checkout
@@ -24,8 +26,11 @@
     gr = grep
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     g = grep --break --heading --line-number
+    cp = cherry-pick
+    up = !sh -c 'git pull --rebase --prune && git log --pretty=format:\"%Cred%ae %Creset- %C(yellow)%s %Creset(%ar)\" HEAD@{1}..'
+    fixup = !git add -p && git commit --amend -C HEAD
 [user]
-    name = siemonday
+    name = NdYAG
     email = siemonday@gmail.com
 [help]
     autocorrect = 1
@@ -36,3 +41,14 @@
 [grep]
     extendRegexp = true
     lineNumber = true
+[core]
+    excludesfile = ~/.gitignore
+[branch]
+    autosetuprebase = always
+[filter "media"]
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
+[push]
+    default = tracking
+[rebase]
+    autosquash = true

@@ -21,7 +21,7 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias ack='ack-grep'
+#alias ack='ack-grep'
 alias rm="rm -i"
 alias ..="cd .."
 alias ...="cd ../.."
@@ -36,7 +36,7 @@ alias ,dev="cd ~/Develop"
 #-------------------------------------------------------------
 # some other alias
 #-------------------------------------------------------------
-alias cat='pretty_cat'
+alias cat='pygmentize -g'
 alias cl='clear'
 
 #-------------------------------------------------------------
